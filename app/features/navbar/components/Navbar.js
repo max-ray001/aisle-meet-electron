@@ -1,75 +1,72 @@
-
 // @flow
 
-import Navigation, { AkGlobalItem } from '@atlaskit/navigation';
+import Navigation, { AkGlobalItem } from "@atlaskit/navigation";
 
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { Component } from "react";
+import { connect } from "react-redux";
 
-import { SettingsButton, SettingsDrawer } from '../../settings';
+import { SettingsButton, SettingsDrawer } from "../../settings";
 
-import HelpButton from './HelpButton';
-import onlinelogo from '../../../../resources/online_logo.png';
+import HelpButton from "./HelpButton";
+import onlinelogo from "../../../../resources/online_logo.png";
 //  import Logo from './Logo';
 
 type Props = {
-
-    /**
-     * Whether Settings Drawer is open or not.
-     */
-    _isSettingsDrawerOpen: boolean;
+  /**
+   * Whether Settings Drawer is open or not.
+   */
+  _isSettingsDrawerOpen: boolean,
 };
 
 /**
  * Navigation Bar component.
  */
 class Navbar extends Component<Props, *> {
-    /**
-     * Get the array of Primary actions of Global Navigation.
-     *
-     * @returns {ReactElement[]}
-     */
-    _getPrimaryActions() {
-        return [
-            <AkGlobalItem key = { 0 }>
-                <SettingsButton />
-            </AkGlobalItem>
-        ];
-    }
+  /**
+   * Get the array of Primary actions of Global Navigation.
+   *
+   * @returns {ReactElement[]}
+   */
+  _getPrimaryActions() {
+    return [
+      <AkGlobalItem key={0}>
+        <SettingsButton />
+      </AkGlobalItem>,
+    ];
+  }
 
-    /**
-     * Get the array of Secondary actions of Global Navigation.
-     *
-     * @returns {ReactElement[]}
-     */
-    _getSecondaryActions() {
-        return [
-            <AkGlobalItem key = { 0 }>
-                <HelpButton />
-            </AkGlobalItem>
-        ];
-    }
+  /**
+   * Get the array of Secondary actions of Global Navigation.
+   *
+   * @returns {ReactElement[]}
+   */
+  _getSecondaryActions() {
+    return [
+      <AkGlobalItem key={0}>
+        <HelpButton />
+      </AkGlobalItem>,
+    ];
+  }
 
-    /**
-     * Render function of component.
-     *
-     * @returns {ReactElement}
-     */
-    render() {
-        return (
-            <Navigation
-                drawers = { [
-                    <SettingsDrawer
-                        isOpen = { this.props._isSettingsDrawerOpen }
-                        key = { 0 } />
-                ] }
-                globalPrimaryActions = { this._getPrimaryActions() }
-                globalPrimaryIcon = { <img src = { onlinelogo } id = 'online' alt = 'online' /> }
-                globalSecondaryActions = { this._getSecondaryActions() }
-                isOpen = { false }
-                isResizeable = { false } />
-        );
-    }
+  /**
+   * Render function of component.
+   *
+   * @returns {ReactElement}
+   */
+  render() {
+    return (
+      <Navigation
+        drawers={[
+          <SettingsDrawer isOpen={this.props._isSettingsDrawerOpen} key={0} />,
+        ]}
+        globalPrimaryActions={this._getPrimaryActions()}
+        globalPrimaryIcon={<img src={onlinelogo} id="online" alt="online" />}
+        globalSecondaryActions={this._getSecondaryActions()}
+        isOpen={false}
+        isResizeable={false}
+      />
+    );
+  }
 }
 
 /**
@@ -81,10 +78,9 @@ class Navbar extends Component<Props, *> {
  * }}
  */
 function _mapStateToProps(state: Object) {
-    return {
-        _isSettingsDrawerOpen: state.navbar.openDrawer === SettingsDrawer
-    };
+  return {
+    _isSettingsDrawerOpen: state.navbar.openDrawer === SettingsDrawer,
+  };
 }
-
 
 export default connect(_mapStateToProps)(Navbar);
