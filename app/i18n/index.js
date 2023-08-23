@@ -11,6 +11,7 @@ const languages = {
     hr: { translation: require('./lang/hr.json') },
     hu: { translation: require('./lang/hu.json') },
     it: { translation: require('./lang/it.json') },
+    ja: { translation: require('./lang/ja.json') },
     nl: { translation: require('./lang/nl.json') },
     pt: { translation: require('./lang/pt-br.json') },
     ru: { translation: require('./lang/ru.json') },
@@ -19,8 +20,8 @@ const languages = {
     'zh-TW': { translation: require('./lang/zh-TW.json') }
 };
 
-const detectedLocale = navigator.language;
-
+// const detectedLocale = navigator.language;
+const detectedLocale = 'ja';
 i18n
     .use(initReactI18next)
     .init({

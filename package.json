@@ -1,9 +1,9 @@
 {
-  "name": "jitsi-meet-electron",
+  "name": "aisle-meet-electron",
   "version": "2023.7.0",
-  "description": "Electron application for Jitsi Meet",
+  "description": "Electron application for Aisle Meet",
   "main": "./build/main.js",
-  "productName": "Jitsi Meet",
+  "productName": "Aisle Meet",
   "private": true,
   "scripts": {
     "start": "webpack --config ./webpack.main.js --mode development && concurrently \"npm:watch\" \"electron ./build/main.js\"",
@@ -11,6 +11,7 @@
     "lint": "eslint . && flow",
     "build": "webpack --config ./webpack.main.js --mode production && webpack --config ./webpack.renderer.js --mode production",
     "dist": "npm run build && electron-builder",
+    "dist:linux": "npm run build && electron-builder --linux",
     "postinstall": "patch-package && electron-builder install-app-deps",
     "watch": "webpack --config ./webpack.renderer.js --mode development --watch --watch-options-poll=1000"
   },
@@ -19,7 +20,7 @@
   },
   "build": {
     "appId": "org.jitsi.jitsi-meet",
-    "productName": "Jitsi Meet",
+    "productName": "Aisle-Meet",
     "generateUpdatesFilesForAllChannels": true,
     "afterSign": "./notarize.js",
     "files": [
@@ -29,7 +30,7 @@
       "!main.js"
     ],
     "mac": {
-      "artifactName": "jitsi-meet.${ext}",
+      "artifactName": "Aisle-Meet.${ext}",
       "target": [
         {
           "arch": "universal",
@@ -47,8 +48,8 @@
       "entitlementsInherit": "entitlements.mac.plist",
       "asarUnpack": "**/*.node",
       "extendInfo": {
-        "NSCameraUsageDescription": "Jitsi Meet requires access to your camera in order to make video-calls.",
-        "NSMicrophoneUsageDescription": "Jitsi Meet requires access to your microphone in order to make calls (audio/video).",
+        "NSCameraUsageDescription": "Aisle Meet requires access to your camera in order to make video-calls.",
+        "NSMicrophoneUsageDescription": "Aisle Meet requires access to your microphone in order to make calls (audio/video).",
         "LSMultipleInstancesProhibited": true
       }
     },
@@ -58,22 +59,22 @@
       "hardenedRuntime": false
     },
     "linux": {
-      "artifactName": "jitsi-meet-${arch}.${ext}",
+      "artifactName": "Aisle-Meet-${arch}.${ext}",
       "category": "VideoConference;AudioVideo;Audio;Video;Network",
-      "description": "Jitsi Meet Desktop App",
+      "description": "Aisle Meet Desktop App",
       "desktop": {
-        "Comment[de]": "Jitsi Meet Desktop App",
-        "Comment[es]": "Aplicación de escritorio Jitsi Meet",
-        "Comment[fr]": "Application de bureau Jitsi Meet",
-        "Comment[hr]": "Jitsi Meet desktop aplikacija",
-        "Comment[hu]": "Asztali Jitsi Meet-alkalmazás",
-        "Comment[it]": "Applicazione Jitsi Meet Desktop",
-        "Comment[pt]": "Aplicativo Jitsi Meet",
-        "Comment[ru]": "Приложение Jitsi Meet",
-        "Comment[zh-CN]": "Jitsi Meet 桌面应用",
-        "Comment[zh-TW]": "Jitsi Meet 桌面應用程式"
+        "Comment[de]": "Aisle Meet Desktop App",
+        "Comment[es]": "Aplicación de escritorio Aisle Meet",
+        "Comment[fr]": "Application de bureau Aisle Meet",
+        "Comment[hr]": "Aisle Meet desktop aplikacija",
+        "Comment[hu]": "Asztali Aisle Meet-alkalmazás",
+        "Comment[it]": "Applicazione Aisle Meet Desktop",
+        "Comment[pt]": "Aplicativo Aisle Meet",
+        "Comment[ru]": "Приложение Aisle Meet",
+        "Comment[zh-CN]": "Aisle Meet 桌面应用",
+        "Comment[zh-TW]": "Aisle Meet 桌面應用程式"
       },
-      "executableName": "jitsi-meet",
+      "executableName": "Aisle-Meet",
       "target": [
         {
           "arch": "x64",
@@ -96,7 +97,7 @@
       ]
     },
     "win": {
-      "artifactName": "jitsi-meet.${ext}",
+      "artifactName": "Aisle-Meet.${ext}",
       "target": [
         {
           "arch": [
@@ -132,7 +133,7 @@
     "webrtc",
     "xmpp",
     "electron",
-    "jitsi-meet"
+    "aisle-meet"
   ],
   "author": "Jitsi Team <support@jitsi.org>",
   "readmeFilename": "README.md",
