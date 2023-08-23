@@ -10,7 +10,7 @@ import { SettingsButton, SettingsDrawer } from '../../settings';
 
 import HelpButton from './HelpButton';
 import onlinelogo from '../../../../resources/online_logo.png';
-import Logo from './Logo';
+//import Logo from './Logo';
 
 type Props = {
 
@@ -64,7 +64,7 @@ class Navbar extends Component<Props, *> {
                         key = { 0 } />
                 ] }
                 globalPrimaryActions = { this._getPrimaryActions() }
-                globalPrimaryIcon = { <img src={onlinelogo} id='online' alt='online' /> }
+                globalPrimaryIcon = { <img src={onlinelogo} id = 'online' alt='online' /> }
                 globalSecondaryActions = { this._getSecondaryActions() }
                 isOpen = { false }
                 isResizeable = { false } />
