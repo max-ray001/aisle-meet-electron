@@ -9,7 +9,8 @@ import { SettingsButton, SettingsDrawer } from "../../settings";
 
 import HelpButton from "./HelpButton";
 import onlinelogo from "../../../../resources/online_logo.png";
-//  import Logo from './Logo';
+
+    //  import Logo from './Logo';
 
 type Props = {
   /**
@@ -27,9 +28,9 @@ class Navbar extends Component<Props, *> {
    *
    * @returns {ReactElement[]}
    */
-  _getPrimaryActions() {
+  _getPrimaryActions () {
     return [
-      <AkGlobalItem key={0}>
+      <AkGlobalItem key= { 0 } >
         <SettingsButton />
       </AkGlobalItem>,
     ];
@@ -38,7 +39,7 @@ class Navbar extends Component<Props, *> {
   /**
    * Get the array of Secondary actions of Global Navigation.
    *
-   * @returns {ReactElement[]}
+   * @returns { ReactElement[] }
    */
   _getSecondaryActions() {
     return [
