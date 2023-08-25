@@ -97,7 +97,7 @@
       ]
     },
     "win": {
-      "artifactName": "Aisle-Meet.${ext}",
+      "artifactName": "Aisleschool-Meet.${ext}",
       "target": [
         {
           "arch": [
