@@ -1,9 +1,9 @@
 {
   "name": "aisle-meet-electron",
   "version": "2023.7.0",
-  "description": "Electron application for Aisle Meet",
+  "description": "Electron application for Aisleschool meet",
   "main": "./build/main.js",
-  "productName": "Aisle Meet",
+  "productName": "Aisleschool meet",
   "private": true,
   "scripts": {
     "start": "webpack --config ./webpack.main.js --mode development && concurrently \"npm:watch\" \"electron ./build/main.js\"",
@@ -20,7 +20,7 @@
   },
   "build": {
     "appId": "org.jitsi.jitsi-meet",
-    "productName": "Aisle-Meet",
+    "productName": "Aisleschool meet",
     "generateUpdatesFilesForAllChannels": true,
     "afterSign": "./notarize.js",
     "files": [
@@ -30,7 +30,7 @@
       "!main.js"
     ],
     "mac": {
-      "artifactName": "Aisle-Meet.${ext}",
+      "artifactName": "Aisleschool-meet.${ext}",
       "target": [
         {
           "arch": "universal",
@@ -59,22 +59,22 @@
       "hardenedRuntime": false
     },
     "linux": {
-      "artifactName": "Aisle-Meet-${arch}.${ext}",
+      "artifactName": "Aisleschool-Meet-${arch}.${ext}",
       "category": "VideoConference;AudioVideo;Audio;Video;Network",
-      "description": "Aisle Meet Desktop App",
+      "description": "Aisleschool Meet Desktop App",
       "desktop": {
-        "Comment[de]": "Aisle Meet Desktop App",
-        "Comment[es]": "Aplicación de escritorio Aisle Meet",
-        "Comment[fr]": "Application de bureau Aisle Meet",
-        "Comment[hr]": "Aisle Meet desktop aplikacija",
-        "Comment[hu]": "Asztali Aisle Meet-alkalmazás",
-        "Comment[it]": "Applicazione Aisle Meet Desktop",
-        "Comment[pt]": "Aplicativo Aisle Meet",
-        "Comment[ru]": "Приложение Aisle Meet",
-        "Comment[zh-CN]": "Aisle Meet 桌面应用",
-        "Comment[zh-TW]": "Aisle Meet 桌面應用程式"
+        "Comment[de]": "Aisleschool Meet Desktop App",
+        "Comment[es]": "Aplicación de escritorio Aisleschool Meet",
+        "Comment[fr]": "Application de bureau Aisleschool Meet",
+        "Comment[hr]": "Aisleschool Meet desktop aplikacija",
+        "Comment[hu]": "Asztali Aisleschool Meet-alkalmazás",
+        "Comment[it]": "Applicazione Aisleschool Meet Desktop",
+        "Comment[pt]": "Aplicativo Aisleschool Meet",
+        "Comment[ru]": "Приложение Aisleschool Meet",
+        "Comment[zh-CN]": "Aisleschool Meet 桌面应用",
+        "Comment[zh-TW]": "Aisleschool Meet 桌面應用程式"
       },
-      "executableName": "Aisle-Meet",
+      "executableName": "Aisleschool-Meet",
       "target": [
         {
           "arch": "x64",
@@ -97,7 +97,7 @@
       ]
     },
     "win": {
-      "artifactName": "Aisle-Meet.${ext}",
+      "artifactName": "Aisleschool-Meet.${ext}",
       "target": [
         {
           "arch": [
@@ -126,7 +126,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/jitsi/jitsi-meet-electron"
+    "url": "git://github.com/onosaito/aisle-meet-electron"
   },
   "keywords": [
     "jingle",

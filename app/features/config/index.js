@@ -13,13 +13,13 @@ export default {
     /**
      * Application name.
      */
-    appName: 'Aisle School',
+    appName: 'Aisleschool meet',
 
     /**
     * The prefix for application protocol.
     * You will also need to replace this in package.json.
     */
-    appProtocolPrefix: 'jitsi-meet',
+    appProtocolPrefix: 'Aisleschool meet',
 
     /**
      * The default server URL of Jitsi Meet Deployment that will be used.
@@ -34,7 +34,7 @@ export default {
     /**
      * URL to send feedback.
      */
-    feedbackURL: 'https://github.com/jitsi/jitsi-meet-electron/issues',
+    feedbackURL: 'https://github.com/onosaito/aisle-meet-electron/issues',
 
     /**
      * The URL of Privacy Policy Page.
