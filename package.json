@@ -135,7 +135,7 @@
     "electron",
     "aisle-meet"
   ],
-  "author": "Jitsi Team <support@jitsi.org>",
+  "author": "Ono-Saito <onosaito0614@gmail.com>",
   "readmeFilename": "README.md",
   "license": "Apache-2.0",
   "dependencies": {
