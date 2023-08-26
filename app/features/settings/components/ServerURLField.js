@@ -86,6 +86,7 @@ class ServerURLField extends Component<Props, State> {
                     placeholder = { config.defaultServerURL }
                     shouldFitContainer = { true }
                     type = 'text'
+                    defaultValue = 'https://meet.aislesoft.co.jp'
                     value = { this.state.serverURL } />
             </Form>
         );
