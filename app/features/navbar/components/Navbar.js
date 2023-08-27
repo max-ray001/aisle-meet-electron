@@ -41,30 +41,30 @@ class Navbar extends Component<Props, *> {
    *
    * @returns { ReactElement[] }
    */
-  _getSecondaryActions() {
+  _getSecondaryActions () {
     return [
       <AkGlobalItem key={0}>
         <HelpButton />
-      </AkGlobalItem>,
+      </AkGlobalItem>
     ];
   }
 
   /**
    * Render function of component.
    *
-   * @returns {ReactElement}
+   * @returns { ReactElement }
    */
   render() {
     return (
       <Navigation
-        drawers={[
-          <SettingsDrawer isOpen={this.props._isSettingsDrawerOpen} key={0} />,
+        drawers = {[
+          <SettingsDrawer isOpen = { this.props._isSettingsDrawerOpen } key={0} />
         ]}
-        globalPrimaryActions={this._getPrimaryActions()}
-        globalPrimaryIcon={<img src={onlinelogo} id="online" alt="online" />}
-        globalSecondaryActions={this._getSecondaryActions()}
-        isOpen={false}
-        isResizeable={false}
+        globalPrimaryActions = { this._getPrimaryActions() }
+        globalPrimaryIcon = { <img src = {onlinelogo} id = "online" alt = "online" /> }
+        globalSecondaryActions = { this._getSecondaryActions() }
+        isOpen = { false }
+        isResizeable = { false }
       />
     );
   }
@@ -73,7 +73,7 @@ class Navbar extends Component<Props, *> {
 /**
  * Maps (parts of) the redux state to the React props.
  *
- * @param {Object} state - The redux state.
+ * @param { Object } state - The redux state.
  * @returns {{
  *     _isSettingsDrawerOpen: boolean
  * }}
@@ -84,4 +84,4 @@ function _mapStateToProps(state: Object) {
   };
 }
 
-export default connect(_mapStateToProps)(Navbar);
+export default connect( _mapStateToProps )( Navbar );
