@@ -22,7 +22,7 @@ type Props = {
 /**
  * Navigation Bar component.
  */
-class Navbar extends Component<Props, *> {
+class Navbar extends Component<Props, * > {
   /**
    * Get the array of Primary actions of Global Navigation.
    *
@@ -43,7 +43,7 @@ class Navbar extends Component<Props, *> {
    */
   _getSecondaryActions () {
     return [
-      <AkGlobalItem key={0}>
+      <AkGlobalItem key={ 0 }>
         <HelpButton />
       </AkGlobalItem>
     ];
@@ -58,7 +58,7 @@ class Navbar extends Component<Props, *> {
     return (
       <Navigation
         drawers = {[
-          <SettingsDrawer isOpen = { this.props._isSettingsDrawerOpen } key={0} />
+          <SettingsDrawer isOpen = { this.props._isSettingsDrawerOpen } key={ 0 } />
         ]}
         globalPrimaryActions = { this._getPrimaryActions() }
         globalPrimaryIcon = { <img src = {onlinelogo} id = "online" alt = "online" /> }
