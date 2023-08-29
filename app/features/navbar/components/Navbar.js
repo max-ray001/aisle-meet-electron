@@ -22,15 +22,15 @@ type Props = {
 /**
  * Navigation Bar component.
  */
-class Navbar extends Component<Props, * > {
+class Navbar extends Component <Props, * > {
   /**
    * Get the array of Primary actions of Global Navigation.
    *
-   * @returns {ReactElement[]}
+   * @returns { ReactElement[] }
    */
   _getPrimaryActions () {
     return [
-      <AkGlobalItem key= { 0 } >
+      <AkGlobalItem key = { 0 } >
         <SettingsButton />
       </AkGlobalItem>,
     ];
@@ -43,7 +43,7 @@ class Navbar extends Component<Props, * > {
    */
   _getSecondaryActions () {
     return [
-      <AkGlobalItem key={ 0 }>
+      <AkGlobalItem key={ 0 } >
         <HelpButton />
       </AkGlobalItem>
     ];
