@@ -44,7 +44,7 @@ class Navbar extends Component <Props, * > {
   _getSecondaryActions () {
     return [
       <AkGlobalItem key={ 0 } >
-        <HelpButton />
+        <HelpButton/>
       </AkGlobalItem>
     ];
   }
